@@ -142,7 +142,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="libao-mt.lib libmad-mt.lib pthread-win32-mt.lib winmm.lib ws2_32.lib"
+				AdditionalDependencies="libao-mt.lib libmad-mt.lib pthread-win32-mt.lib axTLS-mt.lib winmm.lib ws2_32.lib"
 				AdditionalLibraryDirectories="$(SolutionDir)build\temp\lib\"
 				TargetMachine="1"
 			/>
