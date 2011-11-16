@@ -1,3 +1,6 @@
 [submodule "pianobar/src"]
 	path = pianobar/src
 	url = git://github.com/thedmd/pianobar-windows.git
+[submodule "build"]
+	path = build
+	url = git://github.com/thedmd/pianobar-windows-binaries.git
