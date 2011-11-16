@@ -18,3 +18,6 @@ Source code of four libraries is included:
   - libmad - unmodified, but stripped from unnecessary files
   - pthreads-win32 - unmodified, but stripped from unnecessary files
   
+
+Binaries of this project can be found at:
+https://github.com/thedmd/pianobar-windows-binaries
