@@ -1,6 +1,9 @@
 pianobar for Windows - build environment
 ========
 
+** *Binaries* in the form of *standalone* executable ara available at:
+** https://github.com/thedmd/pianobar-windows-binaries
+
 pianobar is a console client for the personalized web radio pandora
 (http://www.pandora.com). Source code of the original project can be found at
 at http://github.com/PromyLOPh/pianobar/ or http://6xq.net/projects/pianobar/
@@ -17,7 +20,3 @@ Source code of four libraries is included:
   - libao - unmodified, but stripped from unnecessary files
   - libmad - unmodified, but stripped from unnecessary files
   - pthreads-win32 - unmodified, but stripped from unnecessary files
-  
-
-Binaries of this project can be found at:
-https://github.com/thedmd/pianobar-windows-binaries
