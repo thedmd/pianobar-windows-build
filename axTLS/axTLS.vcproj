@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)src\crypto\&quot;;&quot;$(ProjectDir)src\ssl\&quot;;&quot;$(ProjectDir)configured\&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)configured\&quot;;&quot;$(ProjectDir)src\crypto\&quot;;&quot;$(ProjectDir)src\ssl\&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;HAVE_CONFIG_H;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS"
 				MinimalRebuild="false"
 				ExceptionHandling="0"
@@ -109,7 +109,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)src\crypto\&quot;;&quot;$(ProjectDir)src\ssl\&quot;;&quot;$(ProjectDir)configured\&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)configured\&quot;;&quot;$(ProjectDir)src\crypto\&quot;;&quot;$(ProjectDir)src\ssl\&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_LIB;HAVE_CONFIG_H;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS"
 				ExceptionHandling="0"
 				RuntimeLibrary="0"

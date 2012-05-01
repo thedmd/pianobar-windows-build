@@ -186,22 +186,6 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="libezxml"
-			>
-			<File
-				RelativePath=".\src\src\libezxml\COPYING"
-				>
-			</File>
-			<File
-				RelativePath=".\src\src\libezxml\ezxml.c"
-				>
-			</File>
-			<File
-				RelativePath=".\src\src\libezxml\ezxml.h"
-				>
-			</File>
-		</Filter>
-		<Filter
 			Name="libwaitress"
 			>
 			<File
@@ -233,14 +217,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\src\src\libpiano\crypt_key_input.h"
-				>
-			</File>
-			<File
-				RelativePath=".\src\src\libpiano\crypt_key_output.h"
-				>
-			</File>
-			<File
 				RelativePath=".\src\src\libpiano\piano.c"
 				>
 			</File>
@@ -253,11 +229,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\src\src\libpiano\xml.c"
+				RelativePath=".\src\src\libpiano\request.c"
 				>
 			</File>
 			<File
-				RelativePath=".\src\src\libpiano\xml.h"
+				RelativePath=".\src\src\libpiano\response.c"
 				>
 			</File>
 		</Filter>
