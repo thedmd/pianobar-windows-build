@@ -1,6 +1,9 @@
 pianobar for Windows - build environment
 ========
 
+*Binaries* in the form of *standalone* executable ara available at:
+https://github.com/thedmd/pianobar-windows-binaries
+
 pianobar is a console client for the personalized web radio pandora
 (http://www.pandora.com). Source code of the original project can be found at
 at http://github.com/PromyLOPh/pianobar/ or http://6xq.net/projects/pianobar/
@@ -12,12 +15,11 @@ found at https://github.com/thedmd/pianobar-windows/
 Solution files for Microsoft Visual Studio 2008 are available and allow building
 pianobar in clean environment.
 
-Source code of four libraries is included:
-  - axTLS - modified version, which generate SHA-1 fingerprint for certificates
-  - libao - unmodified, but stripped from unnecessary files
-  - libmad - unmodified, but stripped from unnecessary files
-  - pthreads-win32 - unmodified, but stripped from unnecessary files
-  
+Source code of included libraries:
+  - PolarSSL
+  - libao
+  - libmad
+  - pthreads-win32
+  - json-c
+  - blowfish - modified Paul Kocher sources, available at http://www.schneier.com/blowfish-download.html
 
-Binaries of this project can be found at:
-https://github.com/thedmd/pianobar-windows-binaries

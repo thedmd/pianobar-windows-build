@@ -64,7 +64,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="libao-mt-debug.lib libmad-mt-debug.lib pthread-win32-mt-debug.lib axTLS-mt-debug.lib winmm.lib ws2_32.lib"
+				AdditionalDependencies="winmm.lib ws2_32.lib"
 				OutputFile="$(OutDir)\$(ProjectName)-debug.exe"
 				AdditionalLibraryDirectories="$(SolutionDir)build\temp\lib\"
 				GenerateDebugInformation="true"
@@ -142,7 +142,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="libao-mt.lib libmad-mt.lib pthread-win32-mt.lib axTLS-mt.lib winmm.lib ws2_32.lib"
+				AdditionalDependencies="winmm.lib ws2_32.lib"
 				AdditionalLibraryDirectories="$(SolutionDir)build\temp\lib\"
 				TargetMachine="1"
 			/>
