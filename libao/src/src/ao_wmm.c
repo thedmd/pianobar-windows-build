@@ -42,11 +42,11 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-//#ifndef KSDATAFORMAT_SUBTYPE_PCM
-//#define KSDATAFORMAT_SUBTYPE_PCM (GUID) {0x00000001,0x0000,0x0010,{0x80,0x00,0x00,0xaa,0x00,0x38,0x9b,0x71}}
+//#ifndef __KSDATAFORMAT_SUBTYPE_PCM
+//#define __KSDATAFORMAT_SUBTYPE_PCM (GUID) {0x00000001,0x0000,0x0010,{0x80,0x00,0x00,0xaa,0x00,0x38,0x9b,0x71}}
 //#endif
 
-GUID KSDATAFORMAT_SUBTYPE_PCM = {0x00000001,0x0000,0x0010,{0x80,0x00,0x00,0xaa,0x00,0x38,0x9b,0x71}};
+static GUID __KSDATAFORMAT_SUBTYPE_PCM = {0x00000001,0x0000,0x0010,{0x80,0x00,0x00,0xaa,0x00,0x38,0x9b,0x71}};
 
 
 #include "ao/ao.h"
@@ -432,7 +432,7 @@ int ao_wmm_open(ao_device * device, ao_sample_format * format)
   wavefmt.Format.nAvgBytesPerSec     = wavefmt.Format.nSamplesPerSec*wavefmt.Format.nBlockAlign;
   wavefmt.Format.cbSize              = 22;
   wavefmt.Samples.wValidBitsPerSample = format->bits;
-  wavefmt.SubFormat           = KSDATAFORMAT_SUBTYPE_PCM;
+  wavefmt.SubFormat           = __KSDATAFORMAT_SUBTYPE_PCM;
   wavefmt.dwChannelMask       = device->output_mask;
 
   internal->wavefmt       = wavefmt;

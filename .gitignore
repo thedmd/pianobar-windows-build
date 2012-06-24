@@ -2,3 +2,5 @@
 *.user
 *.suo
 *.ncb
+*.sdf
+/ipch
