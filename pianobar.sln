@@ -1,12 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pthread-win32", "pthreads\pthread-win32.vcproj", "{CE4CD8F8-E5AB-46F6-ACF3-167687C47C9F}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libao", "libao\libao.vcproj", "{75E224E3-6A99-4C8F-9598-9A6F115B91F2}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmad", "libmad\libmad.vcproj", "{7DDFB46B-0754-450D-9A7A-4B982E40367D}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compatibility Headers", "Compatibility Headers", "{BCA6FEF2-ADE5-4FE0-9BA0-DF9339AB9E52}"
 	ProjectSection(SolutionItems) = preProject
 		compatibility\stdbool.h = compatibility\stdbool.h
@@ -14,24 +8,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compatibility Headers", "Co
 		compatibility\unistd.h = compatibility\unistd.h
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pianobar", "pianobar\pianobar.vcproj", "{D3B44180-848B-4A1F-9176-9891A87876BF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F0B7D905-BD81-4998-8386-333389BE15DE} = {F0B7D905-BD81-4998-8386-333389BE15DE}
-		{4F001038-5DD8-4E07-A6DE-4D0DD4A6DF60} = {4F001038-5DD8-4E07-A6DE-4D0DD4A6DF60}
-		{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F} = {65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}
-		{7DDFB46B-0754-450D-9A7A-4B982E40367D} = {7DDFB46B-0754-450D-9A7A-4B982E40367D}
-		{8F4036C9-0BD5-4373-B59E-E75E8AB72398} = {8F4036C9-0BD5-4373-B59E-E75E8AB72398}
-		{75E224E3-6A99-4C8F-9598-9A6F115B91F2} = {75E224E3-6A99-4C8F-9598-9A6F115B91F2}
-		{CE4CD8F8-E5AB-46F6-ACF3-167687C47C9F} = {CE4CD8F8-E5AB-46F6-ACF3-167687C47C9F}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pthread-win32", "pthreads\pthread-win32.vcxproj", "{CE4CD8F8-E5AB-46F6-ACF3-167687C47C9F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blowfish", "blowfish\blowfish.vcproj", "{F0B7D905-BD81-4998-8386-333389BE15DE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libao", "libao\libao.vcxproj", "{75E224E3-6A99-4C8F-9598-9A6F115B91F2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "json-c", "json-c\json-c.vcproj", "{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmad", "libmad\libmad.vcxproj", "{7DDFB46B-0754-450D-9A7A-4B982E40367D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polarssl", "polarssl\polarssl.vcproj", "{4F001038-5DD8-4E07-A6DE-4D0DD4A6DF60}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pianobar", "pianobar\pianobar.vcxproj", "{D3B44180-848B-4A1F-9176-9891A87876BF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "faad2", "faad2\faad2.vcproj", "{8F4036C9-0BD5-4373-B59E-E75E8AB72398}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blowfish", "blowfish\blowfish.vcxproj", "{F0B7D905-BD81-4998-8386-333389BE15DE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "json-c", "json-c\json-c.vcxproj", "{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polarssl", "polarssl\polarssl.vcxproj", "{4F001038-5DD8-4E07-A6DE-4D0DD4A6DF60}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "faad2", "faad2\faad2.vcxproj", "{8F4036C9-0BD5-4373-B59E-E75E8AB72398}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

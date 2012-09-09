@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}</ProjectGuid>
+    <RootNamespace>json-c</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\temp\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\temp\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\temp\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\temp\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)-mt-debug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)-mt</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)compatibility;$(ProjectDir)configured;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+    </Lib>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\arraylist.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\bits.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\debug.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\linkhash.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_inttypes.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_object.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_object_iterator.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_tokener.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_util.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)configured\json_config.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)compatibility;$(ProjectDir)configured;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+    </Lib>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\arraylist.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\bits.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\debug.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\linkhash.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_inttypes.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_object.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_object_iterator.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_tokener.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)src\json_util.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+xcopy "$(ProjectDir)configured\json_config.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\arraylist.h" />
+    <ClInclude Include="src\bits.h" />
+    <ClInclude Include="src\debug.h" />
+    <ClInclude Include="src\json.h" />
+    <ClInclude Include="src\json_inttypes.h" />
+    <ClInclude Include="src\json_object.h" />
+    <ClInclude Include="src\json_object_private.h" />
+    <ClInclude Include="src\json_tokener.h" />
+    <ClInclude Include="src\json_util.h" />
+    <ClInclude Include="src\linkhash.h" />
+    <ClInclude Include="src\printbuf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\arraylist.c" />
+    <ClCompile Include="src\debug.c" />
+    <ClCompile Include="src\json_object.c" />
+    <ClCompile Include="src\json_tokener.c" />
+    <ClCompile Include="src\json_util.c" />
+    <ClCompile Include="src\linkhash.c" />
+    <ClCompile Include="src\printbuf.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

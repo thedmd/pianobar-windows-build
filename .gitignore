@@ -4,3 +4,5 @@
 *.ncb
 *.sdf
 /ipch
+
+*.opensdf
