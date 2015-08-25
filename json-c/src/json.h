@@ -17,7 +17,6 @@
 extern "C" {
 #endif
 
-#include "bits.h"
 #include "debug.h"
 #include "linkhash.h"
 #include "arraylist.h"
@@ -25,6 +24,7 @@ extern "C" {
 #include "json_object.h"
 #include "json_tokener.h"
 #include "json_object_iterator.h"
+#include "json_c_version.h"
 
 #ifdef __cplusplus
 }

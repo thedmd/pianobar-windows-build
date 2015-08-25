@@ -4,58 +4,21 @@
     <Filter Include="resources">
       <UniqueIdentifier>{5475b56a-9449-44f5-9eda-68707e1acf17}</UniqueIdentifier>
     </Filter>
-    <Filter Include="libwaitress">
-      <UniqueIdentifier>{a1858c56-3822-4fcb-93b0-f2da2a4641b1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="libpiano">
       <UniqueIdentifier>{d2ddb405-1e28-4f88-a72c-2a31aad44d09}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\src\pianobar.ico">
-      <Filter>resources</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="src\src\pianobar.rc">
-      <Filter>resources</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\src\libwaitress\config.h">
-      <Filter>libwaitress</Filter>
-    </ClInclude>
-    <ClInclude Include="src\src\libwaitress\waitress.h">
-      <Filter>libwaitress</Filter>
-    </ClInclude>
-    <ClInclude Include="src\src\libpiano\config.h">
-      <Filter>libpiano</Filter>
-    </ClInclude>
-    <ClInclude Include="src\src\libpiano\crypt.h">
-      <Filter>libpiano</Filter>
-    </ClInclude>
-    <ClInclude Include="src\src\libpiano\piano.h">
-      <Filter>libpiano</Filter>
-    </ClInclude>
-    <ClInclude Include="src\src\libpiano\piano_private.h">
-      <Filter>libpiano</Filter>
-    </ClInclude>
-    <ClInclude Include="src\src\config.h" />
-    <ClInclude Include="src\src\main.h" />
-    <ClInclude Include="src\src\player.h" />
-    <ClInclude Include="src\src\settings.h" />
-    <ClInclude Include="src\src\terminal.h" />
-    <ClInclude Include="src\src\ui.h" />
-    <ClInclude Include="src\src\ui_act.h" />
-    <ClInclude Include="src\src\ui_dispatch.h" />
-    <ClInclude Include="src\src\ui_readline.h" />
-    <ClInclude Include="src\src\ui_types.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\src\libwaitress\waitress.c">
-      <Filter>libwaitress</Filter>
-    </ClCompile>
+    <ClCompile Include="src\src\main.c" />
+    <ClCompile Include="src\src\settings.c" />
+    <ClCompile Include="src\src\ui.c" />
+    <ClCompile Include="src\src\ui_act.c" />
+    <ClCompile Include="src\src\ui_dispatch.c" />
+    <ClCompile Include="src\src\ui_readline.c" />
     <ClCompile Include="src\src\libpiano\crypt.c">
+      <Filter>libpiano</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\libpiano\list.c">
       <Filter>libpiano</Filter>
     </ClCompile>
     <ClCompile Include="src\src\libpiano\piano.c">
@@ -67,13 +30,38 @@
     <ClCompile Include="src\src\libpiano\response.c">
       <Filter>libpiano</Filter>
     </ClCompile>
-    <ClCompile Include="src\src\main.c" />
-    <ClCompile Include="src\src\player.c" />
-    <ClCompile Include="src\src\settings.c" />
-    <ClCompile Include="src\src\terminal.c" />
-    <ClCompile Include="src\src\ui.c" />
-    <ClCompile Include="src\src\ui_act.c" />
-    <ClCompile Include="src\src\ui_dispatch.c" />
-    <ClCompile Include="src\src\ui_readline.c" />
+    <ClCompile Include="src\src\console.c" />
+    <ClCompile Include="src\src\player2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\src\config.h" />
+    <ClInclude Include="src\src\main.h" />
+    <ClInclude Include="src\src\settings.h" />
+    <ClInclude Include="src\src\ui.h" />
+    <ClInclude Include="src\src\ui_act.h" />
+    <ClInclude Include="src\src\ui_dispatch.h" />
+    <ClInclude Include="src\src\ui_readline.h" />
+    <ClInclude Include="src\src\ui_types.h" />
+    <ClInclude Include="src\src\libpiano\crypt.h">
+      <Filter>libpiano</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\libpiano\piano.h">
+      <Filter>libpiano</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\libpiano\piano_private.h">
+      <Filter>libpiano</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\console.h" />
+    <ClInclude Include="src\src\player2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\pianobar.ico">
+      <Filter>resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\pianobar.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

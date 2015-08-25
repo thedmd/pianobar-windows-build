@@ -14,6 +14,15 @@
 
 #include "json_object.h"
 
+#ifndef json_min
+#define json_min(a,b) ((a) < (b) ? (a) : (b))
+#endif
+
+#ifndef json_max
+#define json_max(a,b) ((a) > (b) ? (a) : (b))
+#endif
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -22,8 +31,12 @@ extern "C" {
 
 /* utility functions */
 extern struct json_object* json_object_from_file(const char *filename);
-extern int json_object_to_file(char *filename, struct json_object *obj);
+extern struct json_object* json_object_from_fd(int fd);
+extern int json_object_to_file(const char *filename, struct json_object *obj);
+extern int json_object_to_file_ext(const char *filename, struct json_object *obj, int flags);
 extern int json_parse_int64(const char *buf, int64_t *retval);
+extern int json_parse_double(const char *buf, double *retval);
+
 
 /**
  * Return a string describing the type of the object.

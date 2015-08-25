@@ -42,6 +42,15 @@
     <ClInclude Include="src\printbuf.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="src\json_c_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math_compat.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\random_seed.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\arraylist.c">
@@ -63,6 +72,15 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\printbuf.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\json_c_version.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libjson.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\random_seed.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

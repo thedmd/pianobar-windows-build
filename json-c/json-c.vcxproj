@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -20,12 +20,12 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
-    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -71,17 +71,13 @@
     <Lib>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\arraylist.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\bits.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\debug.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\linkhash.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_inttypes.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_object.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_object_iterator.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_tokener.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_util.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+      <Command>@echo off
+set json_headers=arraylist.h,bits.h,debug.h,json.h,json_config.h,json_c_version.h,json_inttypes.h,json_object.h,json_object_iterator.h,json_object_private.h,json_tokener.h,json_util.h,linkhash.h,printbuf.h,random_seed.h
+
+for %%a in ("%json_headers:,=" "%") do (
+   xcopy "$(ProjectDir)src\%%a" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+)
+
 xcopy "$(ProjectDir)configured\json_config.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
 </Command>
     </PostBuildEvent>
@@ -109,17 +105,13 @@ xcopy "$(ProjectDir)configured\json_config.h" "$(SolutionDir)build\temp\include\
     <Lib>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\arraylist.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\bits.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\debug.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\linkhash.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_inttypes.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_object.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_object_iterator.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_tokener.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
-xcopy "$(ProjectDir)src\json_util.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+      <Command>@echo off
+set json_headers=arraylist.h,bits.h,debug.h,json.h,json_config.h,json_c_version.h,json_inttypes.h,json_object.h,json_object_iterator.h,json_object_private.h,json_tokener.h,json_util.h,linkhash.h,printbuf.h,random_seed.h
+
+for %%a in ("%json_headers:,=" "%") do (
+   xcopy "$(ProjectDir)src\%%a" "$(SolutionDir)build\temp\include\json\" /I /Y /D
+)
+
 xcopy "$(ProjectDir)configured\json_config.h" "$(SolutionDir)build\temp\include\json\" /I /Y /D
 </Command>
     </PostBuildEvent>
@@ -129,22 +121,28 @@ xcopy "$(ProjectDir)configured\json_config.h" "$(SolutionDir)build\temp\include\
     <ClInclude Include="src\bits.h" />
     <ClInclude Include="src\debug.h" />
     <ClInclude Include="src\json.h" />
+    <ClInclude Include="src\json_c_version.h" />
     <ClInclude Include="src\json_inttypes.h" />
     <ClInclude Include="src\json_object.h" />
     <ClInclude Include="src\json_object_private.h" />
     <ClInclude Include="src\json_tokener.h" />
     <ClInclude Include="src\json_util.h" />
     <ClInclude Include="src\linkhash.h" />
+    <ClInclude Include="src\math_compat.h" />
     <ClInclude Include="src\printbuf.h" />
+    <ClInclude Include="src\random_seed.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\arraylist.c" />
     <ClCompile Include="src\debug.c" />
+    <ClCompile Include="src\json_c_version.c" />
     <ClCompile Include="src\json_object.c" />
     <ClCompile Include="src\json_tokener.c" />
     <ClCompile Include="src\json_util.c" />
+    <ClCompile Include="src\libjson.c" />
     <ClCompile Include="src\linkhash.c" />
     <ClCompile Include="src\printbuf.c" />
+    <ClCompile Include="src\random_seed.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

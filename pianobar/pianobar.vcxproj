@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -20,12 +20,12 @@
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v110_xp</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -81,6 +81,9 @@
       <Command>
       </Command>
     </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -112,25 +115,50 @@
       <Command>
       </Command>
     </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="src\src\pianobar.ico" />
+    <ProjectReference Include="..\blowfish\blowfish.vcxproj">
+      <Project>{f0b7d905-bd81-4998-8386-333389be15de}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\json-c\json-c.vcxproj">
+      <Project>{65ab4e50-81ef-4bc4-bba4-8ec4315ada3f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcurl\libcurl.vcxproj">
+      <Project>{b69d7658-2a3f-4bb5-9a7e-4546b8551ec0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vtparse\vtparse.vcxproj">
+      <Project>{f0f2b96c-1a36-487f-9a79-9f5bc7d0b829}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="src\src\pianobar.rc" />
+    <ClCompile Include="src\src\console.c" />
+    <ClCompile Include="src\src\libpiano\crypt.c" />
+    <ClCompile Include="src\src\libpiano\list.c" />
+    <ClCompile Include="src\src\libpiano\piano.c" />
+    <ClCompile Include="src\src\libpiano\request.c" />
+    <ClCompile Include="src\src\libpiano\response.c" />
+    <ClCompile Include="src\src\main.c" />
+    <ClCompile Include="src\src\player2.c" />
+    <ClCompile Include="src\src\settings.c" />
+    <ClCompile Include="src\src\ui.c" />
+    <ClCompile Include="src\src\ui_act.c" />
+    <ClCompile Include="src\src\ui_dispatch.c" />
+    <ClCompile Include="src\src\ui_readline.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\src\libwaitress\config.h" />
-    <ClInclude Include="src\src\libwaitress\waitress.h" />
-    <ClInclude Include="src\src\libpiano\config.h" />
+    <ClInclude Include="src\src\config.h" />
+    <ClInclude Include="src\src\console.h" />
     <ClInclude Include="src\src\libpiano\crypt.h" />
     <ClInclude Include="src\src\libpiano\piano.h" />
     <ClInclude Include="src\src\libpiano\piano_private.h" />
-    <ClInclude Include="src\src\config.h" />
     <ClInclude Include="src\src\main.h" />
-    <ClInclude Include="src\src\player.h" />
+    <ClInclude Include="src\src\player2.h" />
     <ClInclude Include="src\src\settings.h" />
-    <ClInclude Include="src\src\terminal.h" />
     <ClInclude Include="src\src\ui.h" />
     <ClInclude Include="src\src\ui_act.h" />
     <ClInclude Include="src\src\ui_dispatch.h" />
@@ -138,49 +166,10 @@
     <ClInclude Include="src\src\ui_types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\src\libwaitress\waitress.c" />
-    <ClCompile Include="src\src\libpiano\crypt.c" />
-    <ClCompile Include="src\src\libpiano\piano.c" />
-    <ClCompile Include="src\src\libpiano\request.c" />
-    <ClCompile Include="src\src\libpiano\response.c" />
-    <ClCompile Include="src\src\main.c" />
-    <ClCompile Include="src\src\player.c" />
-    <ClCompile Include="src\src\settings.c" />
-    <ClCompile Include="src\src\terminal.c" />
-    <ClCompile Include="src\src\ui.c" />
-    <ClCompile Include="src\src\ui_act.c" />
-    <ClCompile Include="src\src\ui_dispatch.c" />
-    <ClCompile Include="src\src\ui_readline.c" />
+    <Image Include="resources\pianobar.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\blowfish\blowfish.vcxproj">
-      <Project>{f0b7d905-bd81-4998-8386-333389be15de}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\faad2\faad2.vcxproj">
-      <Project>{8f4036c9-0bd5-4373-b59e-e75e8ab72398}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\json-c\json-c.vcxproj">
-      <Project>{65ab4e50-81ef-4bc4-bba4-8ec4315ada3f}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\libao\libao.vcxproj">
-      <Project>{75e224e3-6a99-4c8f-9598-9a6f115b91f2}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\libmad\libmad.vcxproj">
-      <Project>{7ddfb46b-0754-450d-9a7a-4b982e40367d}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\polarssl\polarssl.vcxproj">
-      <Project>{4f001038-5dd8-4e07-a6de-4d0dd4a6df60}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\pthreads\pthread-win32.vcxproj">
-      <Project>{ce4cd8f8-e5ab-46f6-acf3-167687c47c9f}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
+    <ResourceCompile Include="resources\pianobar.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

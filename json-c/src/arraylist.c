@@ -11,16 +11,15 @@
 
 #include "config.h"
 
-#if STDC_HEADERS
+#ifdef STDC_HEADERS
 # include <stdlib.h>
 # include <string.h>
 #endif /* STDC_HEADERS */
 
-#if defined HAVE_STRINGS_H && !defined _STRING_H && !defined __USE_BSD
+#if defined(HAVE_STRINGS_H) && !defined(_STRING_H) && !defined(__USE_BSD)
 # include <strings.h>
 #endif /* HAVE_STRINGS_H */
 
-#include "bits.h"
 #include "arraylist.h"
 
 struct array_list*
@@ -63,7 +62,9 @@ static int array_list_expand_internal(struct array_list *arr, int max)
   int new_size;
 
   if(max < arr->size) return 0;
-  new_size = json_max(arr->size << 1, max);
+  new_size = arr->size << 1;
+  if (new_size < max)
+    new_size = max;
   if(!(t = realloc(arr->array, new_size*sizeof(void*)))) return -1;
   arr->array = (void**)t;
   (void)memset(arr->array + arr->size, 0, (new_size-arr->size)*sizeof(void*));
@@ -74,7 +75,7 @@ static int array_list_expand_internal(struct array_list *arr, int max)
 int
 array_list_put_idx(struct array_list *arr, int idx, void *data)
 {
-  if(array_list_expand_internal(arr, idx)) return -1;
+  if(array_list_expand_internal(arr, idx+1)) return -1;
   if(arr->array[idx]) arr->free_fn(arr->array[idx]);
   arr->array[idx] = data;
   if(arr->length <= idx) arr->length = idx + 1;
@@ -90,8 +91,14 @@ array_list_add(struct array_list *arr, void *data)
 void
 array_list_sort(struct array_list *arr, int(*sort_fn)(const void *, const void *))
 {
-  qsort(arr->array, arr->length, sizeof(arr->array[0]),
-	(int (*)(const void *, const void *))sort_fn);
+  qsort(arr->array, arr->length, sizeof(arr->array[0]), sort_fn);
+}
+
+void* array_list_bsearch(const void **key, struct array_list *arr,
+		int (*sort_fn)(const void *, const void *))
+{
+	return bsearch(key, arr->array, arr->length, sizeof(arr->array[0]),
+			sort_fn);
 }
 
 int

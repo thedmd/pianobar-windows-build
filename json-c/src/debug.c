@@ -41,21 +41,6 @@ extern void mc_set_syslog(int syslog)
   _syslog = syslog;
 }
 
-void mc_abort(const char *msg, ...)
-{
-  va_list ap;
-  va_start(ap, msg);
-#if HAVE_VSYSLOG
-  if(_syslog) {
-	  vsyslog(LOG_ERR, msg, ap);
-  } else
-#endif
-	  vprintf(msg, ap);
-  va_end(ap);
-  exit(1);
-}
-
-
 void mc_debug(const char *msg, ...)
 {
   va_list ap;
@@ -91,7 +76,7 @@ void mc_info(const char *msg, ...)
 #if HAVE_VSYSLOG
     if(_syslog) {
 		vsyslog(LOG_INFO, msg, ap);
-	} else 
+	} else
 #endif
 		vfprintf(stderr, msg, ap);
   va_end(ap);
