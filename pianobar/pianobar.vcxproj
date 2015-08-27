@@ -128,15 +128,13 @@
       <Project>{65ab4e50-81ef-4bc4-bba4-8ec4315ada3f}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\libcurl\libcurl.vcxproj">
-      <Project>{b69d7658-2a3f-4bb5-9a7e-4546b8551ec0}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\vtparse\vtparse.vcxproj">
       <Project>{f0f2b96c-1a36-487f-9a79-9f5bc7d0b829}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\src\console.c" />
+    <ClCompile Include="src\src\http.c" />
     <ClCompile Include="src\src\libpiano\crypt.c" />
     <ClCompile Include="src\src\libpiano\list.c" />
     <ClCompile Include="src\src\libpiano\piano.c" />
@@ -153,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="src\src\config.h" />
     <ClInclude Include="src\src\console.h" />
+    <ClInclude Include="src\src\http.h" />
     <ClInclude Include="src\src\libpiano\crypt.h" />
     <ClInclude Include="src\src\libpiano\piano.h" />
     <ClInclude Include="src\src\libpiano\piano_private.h" />

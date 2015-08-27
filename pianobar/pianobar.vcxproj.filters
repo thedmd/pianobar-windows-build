@@ -32,6 +32,7 @@
     </ClCompile>
     <ClCompile Include="src\src\console.c" />
     <ClCompile Include="src\src\player2.c" />
+    <ClCompile Include="src\src\http.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\src\config.h" />
@@ -53,6 +54,7 @@
     </ClInclude>
     <ClInclude Include="src\src\console.h" />
     <ClInclude Include="src\src\player2.h" />
+    <ClInclude Include="src\src\http.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\pianobar.ico">

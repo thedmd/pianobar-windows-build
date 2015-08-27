@@ -5,15 +5,12 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pianobar", "pianobar\pianobar.vcxproj", "{D3B44180-848B-4A1F-9176-9891A87876BF}"
 	ProjectSection(ProjectDependencies) = postProject
-		{B69D7658-2A3F-4BB5-9A7E-4546B8551EC0} = {B69D7658-2A3F-4BB5-9A7E-4546B8551EC0}
 		{F0F2B96C-1A36-487F-9A79-9F5BC7D0B829} = {F0F2B96C-1A36-487F-9A79-9F5BC7D0B829}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blowfish", "blowfish\blowfish.vcxproj", "{F0B7D905-BD81-4998-8386-333389BE15DE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "json-c", "json-c\json-c.vcxproj", "{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcurl", "libcurl\libcurl.vcxproj", "{B69D7658-2A3F-4BB5-9A7E-4546B8551EC0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vtparse", "vtparse\vtparse.vcxproj", "{F0F2B96C-1A36-487F-9A79-9F5BC7D0B829}"
 EndProject
@@ -35,10 +32,6 @@ Global
 		{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}.Debug|Win32.Build.0 = Debug|Win32
 		{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}.Release|Win32.ActiveCfg = Release|Win32
 		{65AB4E50-81EF-4BC4-BBA4-8EC4315ADA3F}.Release|Win32.Build.0 = Release|Win32
-		{B69D7658-2A3F-4BB5-9A7E-4546B8551EC0}.Debug|Win32.ActiveCfg = Debug|Win32
-		{B69D7658-2A3F-4BB5-9A7E-4546B8551EC0}.Debug|Win32.Build.0 = Debug|Win32
-		{B69D7658-2A3F-4BB5-9A7E-4546B8551EC0}.Release|Win32.ActiveCfg = Release|Win32
-		{B69D7658-2A3F-4BB5-9A7E-4546B8551EC0}.Release|Win32.Build.0 = Release|Win32
 		{F0F2B96C-1A36-487F-9A79-9F5BC7D0B829}.Debug|Win32.ActiveCfg = Debug|Win32
 		{F0F2B96C-1A36-487F-9A79-9F5BC7D0B829}.Debug|Win32.Build.0 = Debug|Win32
 		{F0F2B96C-1A36-487F-9A79-9F5BC7D0B829}.Release|Win32.ActiveCfg = Release|Win32
