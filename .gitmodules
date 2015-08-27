@@ -2,3 +2,7 @@
 	path = pianobar/src
 	url = git@github.com:thedmd/pianobar-windows.git
 	branch = windows-port
+[submodule "build"]
+	path = build
+	url = git@github.com:thedmd/pianobar-windows-binaries.git
+	branch = master
