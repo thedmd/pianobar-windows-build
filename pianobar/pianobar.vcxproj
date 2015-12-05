@@ -54,8 +54,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)compatibility\;$(SolutionDir)build\temp\include\;$(ProjectDir)src\src\libezxml\;$(ProjectDir)src\src\libwaitress\;$(ProjectDir)src\src\libpiano\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WINVER=0x0501;NTDDI_VERSION=0x0501;WIN32;_DEBUG;_CONSOLE;ENABLE_FAAD;ENABLE_MAD;PTW32_STATIC_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)compatibility\;$(SolutionDir)build\temp\include\;$(ProjectDir)src\src\libezxml\;$(ProjectDir)src\src\;$(ProjectDir)src\src\libpiano\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WINVER=0x0501;NTDDI_VERSION=0x0501;WIN32;_HAS_EXCEPTIONS=0;_DEBUG;_CONSOLE;ENABLE_FAAD;ENABLE_MAD;PTW32_STATIC_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -89,8 +89,8 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(SolutionDir)compatibility\;$(SolutionDir)build\temp\include\;$(ProjectDir)src\src\libezxml\;$(ProjectDir)src\src\libwaitress\;$(ProjectDir)src\src\libpiano\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WINVER=0x0501;NTDDI_VERSION=0x0501;WIN32;NDEBUG;_CONSOLE;ENABLE_FAAD;ENABLE_MAD;PTW32_STATIC_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)compatibility\;$(SolutionDir)build\temp\include\;$(ProjectDir)src\src\libezxml\;$(ProjectDir)src\src\;$(ProjectDir)src\src\libpiano\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WINVER=0x0501;NTDDI_VERSION=0x0501;WIN32;_HAS_EXCEPTIONS=0;NDEBUG;_CONSOLE;ENABLE_FAAD;ENABLE_MAD;PTW32_STATIC_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -134,14 +134,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\src\console.c" />
-    <ClCompile Include="src\src\http.c" />
+    <ClCompile Include="src\src\http\http.c" />
     <ClCompile Include="src\src\libpiano\crypt.c" />
     <ClCompile Include="src\src\libpiano\list.c" />
     <ClCompile Include="src\src\libpiano\piano.c" />
     <ClCompile Include="src\src\libpiano\request.c" />
     <ClCompile Include="src\src\libpiano\response.c" />
     <ClCompile Include="src\src\main.c" />
-    <ClCompile Include="src\src\player2.c" />
+    <ClCompile Include="src\src\player\backends\direct_show.c" />
+    <ClCompile Include="src\src\player\backends\media_foundation.cpp" />
+    <ClCompile Include="src\src\player\player2.c" />
     <ClCompile Include="src\src\settings.c" />
     <ClCompile Include="src\src\ui.c" />
     <ClCompile Include="src\src\ui_act.c" />
@@ -151,12 +153,16 @@
   <ItemGroup>
     <ClInclude Include="src\src\config.h" />
     <ClInclude Include="src\src\console.h" />
-    <ClInclude Include="src\src\http.h" />
+    <ClInclude Include="src\src\http\http.h" />
     <ClInclude Include="src\src\libpiano\crypt.h" />
     <ClInclude Include="src\src\libpiano\piano.h" />
     <ClInclude Include="src\src\libpiano\piano_private.h" />
     <ClInclude Include="src\src\main.h" />
-    <ClInclude Include="src\src\player2.h" />
+    <ClInclude Include="src\src\player\backends\media_foundation.h" />
+    <ClInclude Include="src\src\player\backends\utility\com_ptr.h" />
+    <ClInclude Include="src\src\player\backends\utility\optional.h" />
+    <ClInclude Include="src\src\player\player2.h" />
+    <ClInclude Include="src\src\player\player2_private.h" />
     <ClInclude Include="src\src\settings.h" />
     <ClInclude Include="src\src\ui.h" />
     <ClInclude Include="src\src\ui_act.h" />

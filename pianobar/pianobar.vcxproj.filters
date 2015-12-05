@@ -7,6 +7,18 @@
     <Filter Include="libpiano">
       <UniqueIdentifier>{d2ddb405-1e28-4f88-a72c-2a31aad44d09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="player">
+      <UniqueIdentifier>{5cebb794-aae7-4f96-a5d3-964ac9c32584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http">
+      <UniqueIdentifier>{a466ef7e-8f73-4e6b-bf14-29aa36864045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\backends">
+      <UniqueIdentifier>{03cb0be3-c1ba-4ee0-aee8-36cac4739567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="player\backends\utility">
+      <UniqueIdentifier>{2b2ede7d-c8bc-4ddc-b5a9-681ce0f0dc64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\src\main.c" />
@@ -31,8 +43,18 @@
       <Filter>libpiano</Filter>
     </ClCompile>
     <ClCompile Include="src\src\console.c" />
-    <ClCompile Include="src\src\player2.c" />
-    <ClCompile Include="src\src\http.c" />
+    <ClCompile Include="src\src\player\player2.c">
+      <Filter>player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\http\http.c">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\player\backends\media_foundation.cpp">
+      <Filter>player\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="src\src\player\backends\direct_show.c">
+      <Filter>player\backends</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\src\config.h" />
@@ -53,17 +75,33 @@
       <Filter>libpiano</Filter>
     </ClInclude>
     <ClInclude Include="src\src\console.h" />
-    <ClInclude Include="src\src\player2.h" />
-    <ClInclude Include="src\src\http.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="resources\pianobar.ico">
-      <Filter>resources</Filter>
-    </Image>
+    <ClInclude Include="src\src\player\player2.h">
+      <Filter>player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\http\http.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\player\backends\media_foundation.h">
+      <Filter>player\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\player\backends\utility\com_ptr.h">
+      <Filter>player\backends\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\player\backends\utility\optional.h">
+      <Filter>player\backends\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\src\player\player2_private.h">
+      <Filter>player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources\pianobar.rc">
       <Filter>resources</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\pianobar.ico">
+      <Filter>resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>
