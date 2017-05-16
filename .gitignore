@@ -3,6 +3,7 @@
 *.suo
 *.ncb
 *.sdf
-/ipch
-
+*.VC.db
+*.VC.opendb
 *.opensdf
+/ipch
