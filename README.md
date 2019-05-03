@@ -4,7 +4,7 @@ pianobar for Windows - build environment
 [![Build status](https://ci.appveyor.com/api/projects/status/yimv2fbp5m1stagi/branch/master?svg=true)](https://ci.appveyor.com/project/thedmd/pianobar-windows-build/branch/master)
 
 *Binaries* in the form of *standalone* executable ara available at:
-[pianobar-windows-binaries](https://github.com/thedmd/pianobar-windows-binaries)
+[pianobar-windows/releases](https://github.com/thedmd/pianobar-windows/releases)
 
 pianobar is a console client for the personalized web radio pandora
 (http://www.pandora.com). Source code of the original project can be found at
