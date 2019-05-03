@@ -239,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\src\console.c" />
+    <ClCompile Include="src\src\hotkey.c" />
     <ClCompile Include="src\src\http\http.c" />
     <ClCompile Include="src\src\libpiano\crypt.c" />
     <ClCompile Include="src\src\libpiano\list.c" />
@@ -258,6 +259,7 @@
   <ItemGroup>
     <ClInclude Include="src\src\config.h" />
     <ClInclude Include="src\src\console.h" />
+    <ClInclude Include="src\src\hotkey.h" />
     <ClInclude Include="src\src\http\http.h" />
     <ClInclude Include="src\src\libpiano\crypt.h" />
     <ClInclude Include="src\src\libpiano\piano.h" />
