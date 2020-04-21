@@ -7,3 +7,4 @@
 *.VC.opendb
 *.opensdf
 /ipch
+.vs/*
