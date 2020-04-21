@@ -114,8 +114,7 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>xcopy "$(ProjectDir)src\pianobar.cfg.example" "$(OutDir)" /I /Y /D</Command>
     </PostBuildEvent>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
@@ -147,8 +146,7 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>xcopy "$(ProjectDir)src\pianobar.cfg.example" "$(OutDir)" /I /Y /D</Command>
     </PostBuildEvent>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
@@ -182,8 +180,7 @@
       <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>xcopy "$(ProjectDir)src\pianobar.cfg.example" "$(OutDir)" /I /Y /D</Command>
     </PostBuildEvent>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
@@ -217,8 +214,7 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>xcopy "$(ProjectDir)src\pianobar.cfg.example" "$(OutDir)" /I /Y /D</Command>
     </PostBuildEvent>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
