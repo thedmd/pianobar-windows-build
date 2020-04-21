@@ -55,6 +55,7 @@
     <ClCompile Include="src\src\player\backends\direct_show.c">
       <Filter>player\backends</Filter>
     </ClCompile>
+    <ClCompile Include="src\src\hotkey.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\src\config.h" />
@@ -93,6 +94,7 @@
     <ClInclude Include="src\src\player\player2_private.h">
       <Filter>player</Filter>
     </ClInclude>
+    <ClInclude Include="src\src\hotkey.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources\pianobar.rc">
