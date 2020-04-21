@@ -136,6 +136,7 @@ xcopy "$(ProjectDir)src\vtparse_table.h" "$(SolutionDir)build\temp\include\vtpar
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
     </ClCompile>
     <Lib />
     <PostBuildEvent>
@@ -192,6 +193,7 @@ xcopy "$(ProjectDir)src\vtparse_table.h" "$(SolutionDir)build\temp\include\vtpar
       <DebugInformationFormat>
       </DebugInformationFormat>
       <OmitFramePointers>false</OmitFramePointers>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
     </ClCompile>
     <Lib />
     <PostBuildEvent>
