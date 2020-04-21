@@ -63,6 +63,7 @@
   </ImportGroup>
   <PropertyGroup Label="Debugging Properties">
     <LocalDebuggerWorkingDirectory>$(SolutionDir)build\</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerEnvironment>XDG_CONFIG_HOME=$(SolutionDir)build</LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Label="UserMacros" />
