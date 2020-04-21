@@ -8,3 +8,9 @@
 *.opensdf
 /ipch
 .vs/*
+build/temp/*
+build/Win32/*
+build/x64/*
+build/*.cfg
+build/*.cfg.*
+build/*.exe
